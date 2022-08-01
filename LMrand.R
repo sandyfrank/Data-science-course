@@ -34,7 +34,7 @@
 #' @return position vector of the gene expressions found as differentially expressed.
 #' @export
 #'
-#' @author D. Desaulle and Y. Rozenholc
+#' @author Sandy Frank
 #' @references \emph{Differential analysis in Transcriptomic: The strengh of randomly picking 'reference' genes}, D. Desaulle, C. Hoffman, B. Hainque and Y. Rozenholc.
 #' <https://arxiv.org/abs/2103.09872>
 #'
@@ -78,7 +78,7 @@ LMrand = function(X, crtl, n_vec, k=NULL,alpha=0.05,eta=0.05,beta=0.1,r,with.inf
   
   # Holm's detections and number of tests
   
-  Rj = lapply(1:(length(n_vec)-1), function(i) rep(0,m)) ##DD selon le nb de modalités -1 (sans ref)
+  Rj = lapply(1:(length(n_vec)-1), function(i) rep(0,m)) ##DD selon le nb de modalitÃ©s -1 (sans ref)
   
   ########## randomization and detection
   do.randomization = function(i) {
@@ -102,14 +102,14 @@ LMrand = function(X, crtl, n_vec, k=NULL,alpha=0.05,eta=0.05,beta=0.1,r,with.inf
     pval_G = lapply( 1:(length(n_vec)-1), function(k)  pval_Gi(k))
       
     
-    # les indices des detectés
+    # les indices des detectÃ©s
     
     detect = lapply(1:(length(n_vec)-1), function(i) which(pval_G[[i]]<eta))
     
     
     
 
-    ## les indices de tested detectés 
+    ## les indices de tested detectÃ©s 
 
     if (use.multi.core) {
  
@@ -200,7 +200,7 @@ LMrand = function(X, crtl, n_vec, k=NULL,alpha=0.05,eta=0.05,beta=0.1,r,with.inf
 ################################ Trying with exemples############################################################
 
 
-crtl = "D" # modalité de référence de la variable G
+crtl = "D" # modalitÃ© de rÃ©fÃ©rence de la variable G
 L = build_example(m=1000,m1=50,n1=18,fold=500,mu0=100,use.scales=FALSE,nb.size=Inf)
 
 X = L$X
