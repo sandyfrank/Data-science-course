@@ -33,7 +33,7 @@
 #' @return position vector of the gene expressions found as differentially expressed.
 #' @export
 #'
-#' @author Sandy Frank and Dorota Desaulle
+#' @author Sandy Frank 
 #' @references \emph{Differential analysis in Transcriptomic: The strengh of randomly picking 'reference' genes}, D. Desaulle, C. Hoffman, B. Hainque and Y. Rozenholc.
 #' <https://arxiv.org/abs/2103.09872>
 #'
